@@ -14,10 +14,7 @@ You can public files and unused css files. Keep main.jsx and app.jsx.
 Syntax: crypto.randomUUID()
 
 - Short Circuiting &&: <br>
-Instead of writing
-```
-something exists/is true ? do something : do something else
-```
+Instead of writing ```something exists/is true ? do something : do something else```<br>
 You can use ```something exists && do something```
 
 - Prop Types: <br>
