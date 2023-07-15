@@ -7,15 +7,20 @@ const App = () => {
 
   const addItemToList = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos, // display the previous todo, and add a new todo object
-      {
-        id: crypto.randomUUID(),
-        title: newItem,
-        completed: false
-      },
-    ]) // this is the wrong way of setting todos because the next todo added will overwrite the previous one
+    setTodos((currentTodos) => {
+        // now setTodo is a function that takes in the parameter currentTodos
+        return [
+          ...currentTodos, // instead of using ...todos, using a parameter called currentTodos so the app will no reset and the value will not be overwritten
+          {
+            id: crypto.randomUUID(),
+            title: newItem,
+            completed: false
+          }
+        ]
+      }
+    )
   }
+  // Every time you need to use the current value, make sure to pass it through a function, not a value itself
 
 
   return (
