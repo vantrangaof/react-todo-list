@@ -33,3 +33,7 @@ NewTodoForm.propTypes = {
         addTodo : PropTypes.function.isRequired
 }
 ```
+
+- The hooks in React should be called at the top of your functions. In other words, you can not render hooks conditionally
+
+- Layout breakdown: Hooks, helper functions, and return your jsx files
