@@ -10,8 +10,26 @@ You can public files and unused css files. Keep main.jsx and app.jsx.
 
 ## Notes
 
-- randomUUID(): The randomUUID() method of the Crypto interface is used to generate a v4 UUID using a cryptographically secure random number generator.<br>
+- randomUUID(): The randomUUID() method of the Crypto interface is used to generate a v4 UUID using a cryptographically secure random number generator. <br>
 Syntax: crypto.randomUUID()
 
+- Short Circuiting &&: <br>
+Instead of writing
+```
+something exists/is true ? do something : do something else
+```
+You can use ```something exists && do something```
 
-
+- Prop Types: <br>
+```
+import PropTypes from 'prop-types';
+Component.propTypes = {
+        yourPropName : PropTypes.yourPropType.isRequired
+}
+```
+i.e.
+```
+NewTodoForm.propTypes = {
+        addTodo : PropTypes.function.isRequired
+}
+```
