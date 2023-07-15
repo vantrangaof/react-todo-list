@@ -5,5 +5,5 @@ To start with
 Select React framework, select JavaScript + SWC variant
 Next to install dependencies, run ```npm i```
 Run ```npm dev start``` to start
-
+<br>
 You can public files and unused css files. Keep main.jsx and app.jsx.
