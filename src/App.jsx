@@ -1,12 +1,29 @@
+import { useState } from 'react';
 import "./style.css";
 
 const App = () => {
+  const [newItem, setNewItem] = useState("");
+  const [todos, setTodos] = useState([])
+
+  const addItemToList = (e) => {
+    e.preventDefault();
+    setTodos([
+      ...todos, // display the previous todo, and add a new todo object
+      {
+        id: crypto.randomUUID(),
+        title: newItem,
+        completed: false
+      },
+    ]) // this is the wrong way of setting todos because the next todo added will overwrite the previous one
+  }
+
+
   return (
     <>
-    <form className="new-item-form">
+    <form onSubmit={addItemToList} className="new-item-form">
       <div className="form-row">
         <label htmlFor="item"> New Item</label>
-        <input type="text" id="item" ></input>
+        <input value={newItem} onChange={(e => setNewItem(e.target.value))} type="text" id="item" ></input>
       </div>
       <button className="btn">Add</button>
     </form>
